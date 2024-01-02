@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriChecker</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>NutriChecker</h1>
+    </header>
+    <section>
+        <div id="subTitle">
+            <h2>Preencha adequadamente os espaços abaixo referente ao alimento que deseja analisar</h2>
+        </div>
+        <div id="cal"> 
+            <h1>Calorias (Kcal)</h1>
+            <hr>
+            <div id="carb">
+                <h2>Carboidratos</h2>
+                <input type="number" name="quantCarb" id="quantCarb"><br>
+                Quantidade (g)
+            </div>
+            <div id="prot">
+                <h2>Proteínas</h2>
+                <input type="number" name="quantProt" id="quantProt"><br>
+                Quantidade (g)
+            </div>
+            <div id="gordTot">
+                <h2>Gorduras Totais</h2>
+                <input type="number" name="quantGordTot" id="quantGordTot"><br>
+                Quantidade (g)
+            </div>
+        </div>
+        <div id="infoOpc">
+            <h1>Informações Opcionais</h1>
+            <h4>Atenção: Para obter-se resultados corretos, preencha os espaços adequadamente, alimentos sólidos ou semisólidos em gramas (g) e liquídos em mililitros (ml)</h4>
+            <hr>
+            <div id="quantsPorç">
+                <h2>Porção</h2>
+                <input type="number" name="quantPorçG" id="quantPorçG"><br>
+                Porção em gramas (g)<br>
+                <br>
+                OU<br>
+                <br>
+                <input type="number" name="quantPorçML" id="quantPorçML"><br>
+                Porção em mililitros (ml)
+            </div>
+            <div id="açuAdi">
+                <h2>Açúcares Adicionados</h2>
+                <input type="number" name="quantAçuAdiG" id="quantAçuAdiG"><br>
+                Quantidade (g) na porção em gramas (g)<br>
+                <br>
+                OU<br>
+                <br>
+                <input type="number" name="quantAçuAdiML" id="quantAçuAdiML"><br>
+                Quantidade (g) na porção em mililitros (ml)
+            </div>
+            <div id="gordSat">
+                <h2>Gorduras Saturadas</h2>
+                <input type="number" name="quantGordSatG" id="quantGordSatG"><br>
+                Quantidade (g) na porção em gramas (g)<br>
+                <br>
+                OU<br>
+                <br>
+                <input type="number" name="quantGordSatML" id="quantGordSatML"><br>
+                Quantidade (g) na porção em mililitros (ml)
+            </div>
+            <div id="sodio">
+                <h2>Sódio</h2>
+                <input type="number" name="quantSodioG" id="quantSodioG"><br>
+                Quantidade (mg) na porção em gramas (g)<br>
+                <br>
+                OU<br>
+                <br>
+                <input type="number" name="quantSodioML" id="quantSodioML"><br>
+                Quantidade (mg) na porção em mililitros (ml)
+            </div>
+        </div>
+        <div id="resultado">
+            <h2>Resultados</h2>
+            <hr>
+            <div id="textoResultado"></div>
+            <div id="textoAçuAdi"></div>
+            <div id="textoGordSat"></div>
+            <div id="textoSodio"></div>
+            <input id="btnResultado" type="button" value="Verificar" onclick="calcular()"><br>
+            <input id="btnLimpar" type="button" value="Limpar" onclick="window.location.reload()">
+        </div>
+    </section>
+    <footer>
+        <p>
+            © Desenvolvido por Lucas Morais - 2024 <br>
+            <a id="linkProjeto" href="https://github.com/lucasmoraiscm/Calculadora-ENEM-Media-Ponderada">
+                <i>Link para o projeto</i>
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
