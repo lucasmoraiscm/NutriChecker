@@ -219,7 +219,7 @@ header {
     margin: 0.5rem;
 }
 
-.calcular-teor-nutrientes-button {
+.verificar-teor-nutrientes-button {
     background: var(--color-green1);
     font-family: Trebuchet MS , sans-serif;
     color: white;
@@ -230,7 +230,7 @@ header {
     margin: 1rem;
 }
 
-.calcular-teor-nutrientes-button:hover {
+.verificar-teor-nutrientes-button:hover {
     background-color: var(--color-green3);
     cursor: pointer;
 }
