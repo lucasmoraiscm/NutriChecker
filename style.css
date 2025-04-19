@@ -1,240 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-green1:#2b9348;
+    --color-green2:#80b918;
+    --color-green3:#004b23;
+}
+
 body {
-    font: normal 12pt Trebuchet MS , sans-serif;
+    font-family: Trebuchet MS , sans-serif;
+    font-size: 16px;
 }
 
 header {
-    background: rgb(48, 181, 4);
+    background-image: linear-gradient(to left top, var(--color-green2), var(--color-green1));
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     text-align: center;
-    border-radius: 10px;
-    line-height: 50px;
-    height: 50px;
+    width: 100%;
+    padding: 1rem;
+    top: 0;
 }
 
-hr {
-    border-color: rgb(48, 181, 4);
+.logo {
+    margin: 0.5rem;
 }
 
-#subTitle {
+.title {
+    margin: 0.5rem;
+}
+
+.subTitle {
     text-align: center;
-    color: rgb(48, 181, 4);
-    padding: 5px;
-    margin: 10px;
+    color: var(--color-green1);
+    margin: 2rem;
 }
 
-#cal {
-    color: rgb(48, 181, 4);
-    border: 2px solid rgb(48, 181, 4);
+.calorias-section {
+    color: var(--color-green1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.calorias-section h2 {
+    padding: 1rem;
+    text-align: center;
+}
+
+.calorias {
+    color: var(--color-green1);
+    border: 2px solid var(--color-green1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: 70%;
+}
+
+.macronutrientes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.macronutriente {
+    color: var(--color-green1);
+    text-align: center;
+    margin: 1rem;
+}
+
+.macronutiente-input {
+    border: 2px solid;
+    border-color: var(--color-green1);
     border-radius: 20px;
     text-align: center;
-    padding: 20px;
-    margin: 20px;
+    height: 2rem;
+    margin: 0.5rem;
+    outline: none;
 }
 
-#infoOpc {
-    color: rgb(48, 181, 4);
-    border: 2px solid rgb(48, 181, 4);
-    border-radius: 20px;
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
+.macronutiente-input::placeholder {
+    color: var(--color-green1);
+    opacity: 1;
+    font-style: italic;
 }
 
-#carb {
-    color: rgb(48, 181, 4);
-    text-align: center;
-    padding: 5px;
-    margin: 20px;
+.macronutiente-input:focus::placeholder {
+    color: transparent;
 }
 
-#quantCarb {
-    border-color: rgb(181, 4, 72);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
+.macronutiente-input::-webkit-outer-spin-button,
+.macronutiente-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-#prot {
-    color: rgb(48, 181, 4);
-    text-align: center;
-    padding: 5px;
-    margin: 20px;
+.resultado-calorias {
+    margin: 1rem;
 }
 
-#quantProt {
-    border-color: rgb(22, 4, 181);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#gordTot {
-    color: rgb(48, 181, 4);
-    text-align: center;
-    padding: 5px;
-    margin: 20px;
-}
-
-#quantGordTot {
-    border-color: rgb(181, 152, 4);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#quantsPorç {
-    color: rgb(48, 181, 4);
-    text-align: center;
-    padding: 5px;
-    margin: 20px;
-}
-
-#quantPorçG {
-    border-color: rgb(181, 4, 72);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#quantPorçML {
-    border-color: rgb(22, 4, 181);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#açuAdi {
-    color: rgb(48, 181, 4);
-    text-align: center;
-    padding: 5px;
-    margin: 20px;
-}
-
-#quantAçuAdiG {
-    border-color: rgb(181, 4, 72);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#quantAçuAdiML {
-    border-color: rgb(22, 4, 181);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#gordSat {
-    color: rgb(48, 181, 4);
-    text-align: center;
-    padding: 5px;
-    margin: 20px;
-}
-
-#quantGordSatG {
-    border-color: rgb(181, 4, 72);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#quantGordSatML {
-    border-color: rgb(22, 4, 181);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#sodio {
-    color: rgb(48, 181, 4);
-    text-align: center;
-    padding: 5px;
-    margin: 20px;
-}
-
-#quantSodioG {
-    border-color: rgb(181, 4, 72);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#quantSodioML {
-    border-color: rgb(22, 4, 181);
-    border-radius: 20px;
-    text-align: center;
-    margin: 5px;
-}
-
-#resultado {
-    color: rgb(48, 181, 4);
-    border: 2px solid rgb(48, 181, 4);
-    border-radius: 20px;
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-}
-
-#textoResultado {
-    font: normal 16pt Trebuchet MS , sans-serif;
-    color: rgb(48, 181, 4);
-    padding: 5px;
-}
-
-#textoAçuAdi {
-    font: normal 16pt Trebuchet MS , sans-serif;
-    color: rgb(48, 181, 4);
-    padding: 5px;
-}
-
-#textoGordSat {
-    font: normal 16pt Trebuchet MS , sans-serif;
-    color: rgb(48, 181, 4);
-    padding: 5px;
-}
-
-#textoSodio {
-    font: normal 16pt Trebuchet MS , sans-serif;
-    color: rgb(48, 181, 4);
-    padding: 5px;
-}
-
-#btnResultado {
-    background: rgb(48, 181, 4);
+.calcular-calorias-button {
+    background: var(--color-green1);
     font-family: Trebuchet MS , sans-serif;
     color: white;
-    border-color: rgb(29, 118, 0);
+    border: none;
     border-radius: 20px;
     height: 40px;
     width: 100px;
-    margin: 20px;
+    margin: 1rem;
 }
 
-#btnLimpar {
-    background: rgb(181, 152, 4);
+.calcular-calorias-button:hover {
+    background-color: var(--color-green3);
+    cursor: pointer;
+}
+
+.teor-nutrientes-section {
+    color: var(--color-green1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.teor-nutrientes-section h2 {
+    padding: 1rem;
+    text-align: center;
+}
+
+.teor-nutrientes {
+    color: var(--color-green1);
+    border: 2px solid var(--color-green1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: 70%;
+}
+
+.tipo-porcao {
+    color: var(--color-green1);
+    text-align: center;
+}
+
+.tipo-porcao label {
+    margin: 1rem;
+}
+
+.tipo-porcao-opcoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.radio-selecionado {
+    accent-color: var(--color-green1);
+    transform: scale(2);
+    margin: 1rem;
+}
+
+.porcao-input {
+    border: 2px solid;
+    border-color: var(--color-green1);
+    border-radius: 20px;
+    text-align: center;
+    width: 12rem;
+    height: 2rem;
+    margin: 0.5rem;
+    outline: none;
+}
+
+.porcao-input::placeholder {
+    color: var(--color-green1);
+    opacity: 1;
+    font-style: italic;
+}
+
+.porcao-input:focus::placeholder {
+    color: transparent;
+}
+
+.porcao-input::-webkit-outer-spin-button,
+.porcao-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nutrientes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.nutriente {
+    color: var(--color-green1);
+    text-align: center;
+    margin: 1rem;
+}
+
+.resultado-teor-nutrientes {
+    margin: 1rem;
+}
+
+.resultado-teor-nutrientes p {
+    margin: 0.5rem;
+}
+
+.calcular-teor-nutrientes-button {
+    background: var(--color-green1);
     font-family: Trebuchet MS , sans-serif;
     color: white;
-    border-color: rgb(119, 99, 0);
+    border: none;
     border-radius: 20px;
     height: 40px;
     width: 100px;
+    margin: 1rem;
+}
+
+.calcular-teor-nutrientes-button:hover {
+    background-color: var(--color-green3);
+    cursor: pointer;
 }
 
 footer {
-    background: rgb(48, 181, 4);
+    background-image: linear-gradient(to left top, var(--color-green2), var(--color-green1));
     color: white;
-    border-radius: 10px;
     text-align: center;
-    height: 40px;
+    height: 4rem;
+    padding: 1rem;
 }
 
-#linkProjeto {
+.link-projeto {
     color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .macronutrientes, .nutrientes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tipo-porcao-opcoes {
+        flex-direction: column;
+        align-items: start;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    header {
-        font: normal 8pt Trebuchet MS , sans-serif;
-        line-height: 50px;
+    .calorias, .teor-nutrientes {
+        width: 90%;
     }
 }
