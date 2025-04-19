@@ -264,3 +264,9 @@ footer {
         width: 90%;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .radio-selecionado {
+        margin: 0.5rem;
+    }
+}
