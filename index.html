@@ -5,99 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriChecker</title>
+    <link rel="icon" href="./img/maca-favicon.png" type="image/png">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>NutriChecker</h1>
+        <div class="logo">
+            <img src="./img/maca-logo.png" alt="Logo do site">
+        </div>
+        <div class="title">
+           <h1>NutriChecker</h1> 
+        </div>
     </header>
-    <section>
-        <div id="subTitle">
-            <h2>Preencha adequadamente os espaços abaixo referente ao alimento que deseja analisar</h2>
-        </div>
-        <div id="cal"> 
-            <h1>Calorias (Kcal)</h1>
-            <hr>
-            <div id="carb">
-                <h2>Carboidratos</h2>
-                <input type="number" name="quantCarb" id="quantCarb"><br>
-                Quantidade (g)
-            </div>
-            <div id="prot">
-                <h2>Proteínas</h2>
-                <input type="number" name="quantProt" id="quantProt"><br>
-                Quantidade (g)
-            </div>
-            <div id="gordTot">
-                <h2>Gorduras Totais</h2>
-                <input type="number" name="quantGordTot" id="quantGordTot"><br>
-                Quantidade (g)
-            </div>
-        </div>
-        <div id="infoOpc">
-            <h1>Informações Opcionais</h1>
-            <h4>Atenção: Para obter-se resultados corretos, preencha os espaços adequadamente, alimentos sólidos ou semisólidos em gramas (g) e liquídos em mililitros (ml)</h4>
-            <hr>
-            <div id="quantsPorç">
-                <h2>Porção</h2>
-                <input type="number" name="quantPorçG" id="quantPorçG"><br>
-                Porção em gramas (g)<br>
-                <br>
-                OU<br>
-                <br>
-                <input type="number" name="quantPorçML" id="quantPorçML"><br>
-                Porção em mililitros (ml)
-            </div>
-            <div id="açuAdi">
-                <h2>Açúcares Adicionados</h2>
-                <input type="number" name="quantAçuAdiG" id="quantAçuAdiG"><br>
-                Quantidade (g) na porção em gramas (g)<br>
-                <br>
-                OU<br>
-                <br>
-                <input type="number" name="quantAçuAdiML" id="quantAçuAdiML"><br>
-                Quantidade (g) na porção em mililitros (ml)
-            </div>
-            <div id="gordSat">
-                <h2>Gorduras Saturadas</h2>
-                <input type="number" name="quantGordSatG" id="quantGordSatG"><br>
-                Quantidade (g) na porção em gramas (g)<br>
-                <br>
-                OU<br>
-                <br>
-                <input type="number" name="quantGordSatML" id="quantGordSatML"><br>
-                Quantidade (g) na porção em mililitros (ml)
-            </div>
-            <div id="sodio">
-                <h2>Sódio</h2>
-                <input type="number" name="quantSodioG" id="quantSodioG"><br>
-                Quantidade (mg) na porção em gramas (g)<br>
-                <br>
-                OU<br>
-                <br>
-                <input type="number" name="quantSodioML" id="quantSodioML"><br>
-                Quantidade (mg) na porção em mililitros (ml)
-            </div>
-        </div>
-        <div id="resultado">
-            <h2>Resultados</h2>
-            <hr>
-            <div id="textoResultado"></div>
-            <div id="textoAçuAdi"></div>
-            <div id="textoGordSat"></div>
-            <div id="textoSodio"></div>
-            <input id="btnResultado" type="button" value="Verificar" onclick="calcular()"><br>
-            <input id="btnLimpar" type="button" value="Limpar" onclick="window.location.reload()">
+
+    <section class="subTitle-section">
+        <div class="subTitle">
+            <h3>Preencha adequadamente os espaços abaixo referente ao alimento que deseja analisar</h3>
         </div>
     </section>
+
+    <section class="calorias-section">
+        <h2>Calcular Calorias (Kcal)</h2>
+        <div class="calorias">
+            <div class="macronutrientes">
+                <div class="macronutriente">
+                    <h2>Carboidratos</h2>
+                    <input type="number" class="macronutiente-input" id="quantCarboidratos" placeholder="Digite a quantidade (g)">
+                </div>
+                <div class="macronutriente">
+                    <h2>Proteínas</h2>
+                    <input type="number" class="macronutiente-input" id="quantProteinas" placeholder="Digite a quantidade (g)">
+                </div>
+                <div class="macronutriente">
+                    <h2>Gorduras Totais</h2>
+                    <input type="number" class="macronutiente-input" id="quantGordTotais" placeholder="Digite a quantidade (g)">
+                </div>
+            </div>
+            <div class="resultado-calorias">
+                <p id="resultadoCalorias"></p>
+            </div>
+            <input class="calcular-calorias-button" type="button" value="Calcular" onclick="calcularCalorias()"> 
+        </div>
+    </section>
+
+    <section class="teor-nutrientes-section">
+        <h2>Verificar Teor de Nutrientes</h2>
+        <div class="teor-nutrientes">
+            <div class="tipo-porcao">
+                <h2>Tipo de Porção</h2>
+                <div class="tipo-porcao-opcoes">
+                    <label>
+                        <input type="radio" name="cor" value="Solido" id="porcaoSolido" checked class="radio-selecionado">
+                        Sólido ou Semisólido (g)
+                    </label>
+                    <label>
+                        <input type="radio" name="cor" value="Liquido" id="porcaoLiquido" checked class="radio-selecionado">
+                        Líquido (ml)
+                    </label>
+                </div>
+            </div>
+            <div class="porcao">
+                <div class="nutriente">
+                    <h2>Porção</h2>
+                    <input type="number" class="porcao-input" id="quantPorcao" placeholder="Digite a quantidade (g ou ml)">
+                </div>
+            </div>
+            <div class="nutrientes">
+                <div class="nutriente">
+                    <h2>Açúcares Adicionados</h2>
+                    <input type="number" class="macronutiente-input" id="quantAcucaresAdicionados" placeholder="Digite a quantidade (g)">
+                </div>
+                <div class="nutriente">
+                    <h2>Gorduras Saturadas</h2>
+                    <input type="number" class="macronutiente-input" id="quantGordurasSaturadas" placeholder="Digite a quantidade (g)">
+                </div>
+                <div class="nutriente">
+                    <h2>Sódio</h2>
+                    <input type="number" class="macronutiente-input" id="quantSodio" placeholder="Digite a quantidade (mg)">
+                </div>
+            </div>
+            <div class="resultado-teor-nutrientes">
+                <p id="resultadoTeorAcucaresAdicionados"></p>
+                <p id="resultadoTeorGordurasSaturadas"></p>
+                <p id="resultadoTeorSodio"></p>
+            </div>
+            <input class="calcular-teor-nutrientes-button" type="button" value="Calcular" onclick="calcularTeorNutrientes()">
+        </div>
+    </section>
+    
     <footer>
-        <p>
-            © Desenvolvido por Lucas Morais - 2024 <br>
-            <a id="linkProjeto" href="https://github.com/lucasmoraiscm/NutriChecker">
-                <i>Link para o projeto</i>
-            </a>
-        </p>
+        <p>© Desenvolvido por Lucas Morais - 2025</p>
+        <a class="link-projeto" href="https://github.com/lucasmoraiscm/NutriChecker">
+            <i>Link para o projeto</i>
+        </a>
     </footer>
 </body>
 </html>
