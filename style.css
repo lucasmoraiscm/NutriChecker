@@ -243,6 +243,10 @@ footer {
     padding: 1rem;
 }
 
+footer p {
+    padding-bottom: 0.25rem;
+}
+
 .link-projeto {
     color: white;
 }
