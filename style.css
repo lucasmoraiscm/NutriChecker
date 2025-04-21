@@ -46,7 +46,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
+    margin: 3rem;
 }
 
 .calorias-section h2 {
@@ -62,8 +62,16 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem;
     width: 70%;
+}
+
+.calorias-head {
+    color: #FFFFFF;
+    background-image: linear-gradient(to left top, var(--color-green2), var(--color-green1));
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    padding: 0.5rem;
 }
 
 .macronutrientes {
@@ -117,7 +125,7 @@ header {
     border-radius: 20px;
     height: 40px;
     width: 100px;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 .calcular-calorias-button:hover {
@@ -130,7 +138,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
+    margin: 3rem;
 }
 
 .teor-nutrientes-section h2 {
@@ -146,8 +154,17 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem;
     width: 70%;
+}
+
+.teor-nutrientes-head {
+    color: #FFFFFF;
+    background-image: linear-gradient(to left top, var(--color-green2), var(--color-green1));
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .tipo-porcao {
@@ -227,7 +244,7 @@ header {
     border-radius: 20px;
     height: 40px;
     width: 100px;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 .verificar-teor-nutrientes-button:hover {
@@ -264,7 +281,7 @@ footer p {
 
 @media screen and (max-width: 600px) {
     .calorias, .teor-nutrientes {
-        width: 90%;
+        width: 100%;
     }
 }
 
